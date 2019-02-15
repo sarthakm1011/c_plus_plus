@@ -43,14 +43,50 @@ void void_pointer() {
 	void* ptr = &value;
 	cout << *static_cast<int*>(ptr) << endl;
 
-	void* pointer1 = NULL // this is a void pointer which is a NULL pointer 	
+	void* pointer1 = NULL; // this is a void pointer which is a NULL pointer 	
+}
+
+
+
+void dynamic_allocation() {
+	void *p  = malloc(4);
+	cout << p << endl;
+	
+//	void *p2 = malloc(10*sizeof(int));
+//	cout << p2 << endl;
+	
+//	int* p2 = (int*)malloc(10*sizeof(int));
+	// it's important to typecast to derference the pointer and use it's valu
+
+//	*p = 2 // can only be done after dereferencing
+	// *p = p[0]
+
+
+	
+	// calloc initialise the memory with 0 whereas calloc has garbage values
+	
+	// malloc is used when the size of the arrayis to be created at runtime which is not allowed. 
+	
+	// Even after freeing the memory we can access the memory if we know the address to the memory but we should not change anything at that location because it's like shooting in the dark as we don't know what information is kept at those chunks of memory now because we have freed the memory
+
+	int n;
+	scanf("%d", &n);
+	
+	int* a = (int*)malloc(10*sizeof(int));
+	cout << a << endl;
+
+	int* b = (int*)realloc(a, 2*n*sizeof(int));
+	cout << b << endl;
+	
+	
 }
 
 
 
 int main() {
 	//dynamic_memory();
-	void_pointer();
+	//void_pointer();
+	dynamic_allocation();
 }
 
 
