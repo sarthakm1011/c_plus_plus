@@ -26,6 +26,7 @@ using namespace std;
 
 // stack is very small and heap is very large
 
+// macros in c are preprocessors which are made before the compilation of the code.
 
 // CACHE
 //-------
